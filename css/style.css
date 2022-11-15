@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-color: rgb(218, 200, 200);
+}
+
+body {
+    background-color: var(--pink-color);
+}
+
+#container {
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: whitesmoke;
+    padding: 30px 5%;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-style: italic;
+    margin: 40px 0 20px 0;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid var(--pink-color);
+    width: 200px;
+    height: 35px;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--pink-color);
+    width: 100px;
+    height: 30px;
+    border: none;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+.done-button {
+    background-color: rgb(160, 196, 160);
+}
+
+#error-message {
+    color: red;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+#error-message2 {
+    color: red;
+    font-style: italic;
+    font-size: 0.6rem;
+}
