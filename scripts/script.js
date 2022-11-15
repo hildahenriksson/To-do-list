@@ -9,7 +9,7 @@ addNewItem.addEventListener('click', function(e){
     let newItem = document.createElement('li');
     let newItemValue = document.getElementById('new-item-text');
 
-    if(newItemValue.value == '') {
+    if(newItemValue.value.trim() == '') {
         let errorMessage = document.createElement('p');
         errorMessage.innerHTML = "Fyll i fältet med din syssla";
         errorMessage.setAttribute("id", "error-message");
@@ -36,7 +36,7 @@ addNewItem.addEventListener('click', function(e){
                 buttonSpecifics.removeErrorMessage();
             }
 
-            if(e.target.previousElementSibling.value == '') {
+            if(e.target.previousElementSibling.value.trim() == '') {
                 buttonSpecifics.createErrorMessage(e);
             }
 
