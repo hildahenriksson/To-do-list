@@ -43,7 +43,6 @@ addNewItem.addEventListener('click', function(e){
             else {
                 buttonSpecifics.makePossibleToEdit(e, "Ändra", "Spara");
             }
-            
         })
         
         // DONE-BUTTON
@@ -51,7 +50,18 @@ addNewItem.addEventListener('click', function(e){
         let doneButton = buttonSpecifics.createButton("Färdig", "done-button");
 
         doneButton.addEventListener('click', function(e){
-            buttonSpecifics.moveToDoneList(e);
+
+            if(e.target.parentNode.contains(document.getElementById('error-message2'))){
+                buttonSpecifics.removeErrorMessage();
+            }
+
+            if(e.target.parentNode.firstElementChild.value.trim() == '') {
+                buttonSpecifics.createErrorMessage(e);
+            }
+
+            else{
+                buttonSpecifics.moveToDoneList(e);
+            }
         })
 
         // DELETE_BUTTON
