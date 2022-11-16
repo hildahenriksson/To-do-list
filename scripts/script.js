@@ -24,10 +24,6 @@ addNewItem.addEventListener('click', function(e){
         newInputBox.setAttribute("value", newItemValue.value);
         newInputBox.setAttribute("readonly", "");
 
-        
-        
-        // CHANGE-BUTTON
-
         let changeButton = buttonSpecifics.createButton("Ändra", "change-button");
         
         changeButton.addEventListener('click', function(e){
@@ -44,8 +40,6 @@ addNewItem.addEventListener('click', function(e){
                 buttonSpecifics.makePossibleToEdit(e, "Ändra", "Spara");
             }
         })
-        
-        // DONE-BUTTON
 
         let doneButton = buttonSpecifics.createButton("Färdig", "done-button");
 
@@ -63,8 +57,6 @@ addNewItem.addEventListener('click', function(e){
                 buttonSpecifics.moveToDoneList(e);
             }
         })
-
-        // DELETE_BUTTON
 
         let deleteButton = buttonSpecifics.createButton("Radera", "delete-button");
     

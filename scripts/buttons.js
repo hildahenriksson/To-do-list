@@ -1,4 +1,11 @@
 class ButtonSpecifics {
+
+    createButton = function(name, className) {
+        let button = document.createElement('button');
+        button.innerHTML = name;
+        button.classList.add(className);
+        return button;
+    }
     
     removeErrorMessage = function() {
         document.getElementById("error-message2").remove();
@@ -25,13 +32,6 @@ class ButtonSpecifics {
     moveToDoneList = function(e) {
         document.querySelector("#completed-items ul").append(e.target.parentNode);
         e.target.remove();
-    }
-
-    createButton = function(name, className) {
-        let button = document.createElement('button');
-        button.innerHTML = name;
-        button.classList.add(className);
-        return button;
     }
 
     deleteParent = function(e) {
